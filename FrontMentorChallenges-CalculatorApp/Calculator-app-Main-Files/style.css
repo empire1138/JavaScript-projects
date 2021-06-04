@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Spartan", sans-serif;
+}
+
+.container {
+  max-width: 480px;
+  border: 1px solid red;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.display-output {
+  display: flex;
+  
+  align-items: flex-end;
+  justify-content: space-around;
+  background-color: gray;
+  flex-direction: column;
+  word-wrap: break-word;
+  word-break: break-all;
+  grid-column: 1/-1;
+  margin-bottom: 15px;
+}
+
+.calculator-area {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: repeat(4, 120px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+
+.span-two {
+  grid-column: span 2;
+}
+
+@media screen and (max-width: 375px) {
+  .calculator-area {
+    max-width: 345px;
+  }
+}
